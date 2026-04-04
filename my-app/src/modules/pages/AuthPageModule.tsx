@@ -4,6 +4,8 @@ import {Box, Container, Typography} from "@mui/material";
 import NavBar from "@/components/Navbar/NavBar";
 import ButtonStation from "@/components/Buttons/ButtonStation";
 import LoginForm from "@/components/AuthorizationForm/LoginForm";
+import AuthBox from "@/components/AuthorizationForm/AuthBox";
+
 
 export default function AuthPageModule(){
     return(
@@ -23,7 +25,7 @@ export default function AuthPageModule(){
                     justifyContent: 'center'
                 }}>
                 <Box>
-                    <LoginForm switchForm={()=>{}} handleClose={()=>{}}/>
+                    <AuthBox/>
                 </Box>
             </Container>
         </Box>

@@ -7,7 +7,7 @@ import {Container } from '@mui/material';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Электростанции',
+    title: 'Station',
     description: 'Admin panel with theme switching',
     icons: {
         icon: '/logo/type3.svg',
@@ -28,7 +28,7 @@ export default function RootLayout({
         </head>
         <body className={inter.className} suppressHydrationWarning>
         <ThemeContextProvider>
-            <Container maxWidth="xl" sx={{ mt: 3, mb: 3 }}>
+            <Container maxWidth="xxl" sx={{ mt: 3 }}>
                 {children}
             </Container>
         </ThemeContextProvider>
