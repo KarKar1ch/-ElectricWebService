@@ -24,7 +24,8 @@ export default function ButtonStation({
             variant = 'contained'
             sx={{
                 width:220,
-                color:'#fff'
+                color:'#fff',
+                ...sx
             }}
         >
             {children}
