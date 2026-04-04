@@ -1,6 +1,8 @@
 import {Box, Container, Typography} from "@mui/material";
 import NavBar from "@/components/Navbar/NavBar";
-import ButtonStation from "@/components/Buttons/ButtonStation";
+import ButtonRefuel from "@/components/Buttons/ButtonRefuel";
+import UserCard from "@/components/Card/UserCard";
+import AddCar from "@/modules/AddCars/AddCar";
 
 
 export default function ProfilePageModule(){
@@ -16,14 +18,14 @@ export default function ProfilePageModule(){
             <Container
                 sx={{
                     width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                <Box>
+                    mt:4,
 
+                }}>
+                <Box sx={{display:'flex', justifyContent:'space-between', mb:4,}}>
+                    <UserCard name={'Карина'} surname={'Рогалевич'} email={'karina.rogalevich@mail.ru'}/>
+                    <ButtonRefuel/>
                 </Box>
+                <AddCar/>
             </Container>
         </Box>
     )
