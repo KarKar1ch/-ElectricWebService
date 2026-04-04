@@ -30,26 +30,45 @@ const AuthContainer = () => {
                     elevation={0}
                     sx={{
                         mb: 2,
+                        p: '4px',
                         borderRadius: '16px',
                         background: 'rgba(173,139,251,0.15)',
+                        display: 'flex',
                     }}
                 >
-                    <Tabs
-                        value={isRegister ? 1 : 0}
-                        onChange={handleChange}
-                        variant="fullWidth"
-                        indicatorColor="secondary"
+                    <Box
+                        onClick={() => setIsRegister(false)}
                         sx={{
-                            '& .MuiTabs-indicator': {
-                                backgroundColor: '#AD8BFB',
-                                height: 3,
-                                borderRadius: 2,
-                            },
+                            flex: 1,
+                            textAlign: 'center',
+                            py: 1,
+                            borderRadius: '12px',
+                            cursor: 'pointer',
+                            background: !isRegister ? '#AD8BFB' : 'transparent',
+                            color: !isRegister ? '#fff' : 'inherit',
+                            transition: '0.3s',
+                            fontWeight: 600,
                         }}
                     >
-                        <Tab label="Вход" />
-                        <Tab label="Регистрация" />
-                    </Tabs>
+                        Вход
+                    </Box>
+
+                    <Box
+                        onClick={() => setIsRegister(true)}
+                        sx={{
+                            flex: 1,
+                            textAlign: 'center',
+                            py: 1,
+                            borderRadius: '12px',
+                            cursor: 'pointer',
+                            background: isRegister ? '#AD8BFB' : 'transparent',
+                            color: isRegister ? '#fff' : 'inherit',
+                            transition: '0.3s',
+                            fontWeight: 600,
+                        }}
+                    >
+                        Регистрация
+                    </Box>
                 </Paper>
 
                 {isRegister ? (

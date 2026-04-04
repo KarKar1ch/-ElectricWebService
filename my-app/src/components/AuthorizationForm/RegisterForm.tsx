@@ -135,17 +135,9 @@ const RegisterForm: React.FC<IRegisterFormProps> = ({ switchForm, handleClose })
                                 }}
                             />
                         </Box>
-
-                        <ButtonStation disabled={!isValid || isSubmitting}>
+                        <ButtonStation sx={{width:'100%'}}>
                             Зарегистрироваться
                         </ButtonStation>
-
-                        <Typography
-                            sx={{ mt: 2, cursor: 'pointer', textAlign: 'center' }}
-                            onClick={() => switchForm(false)}
-                        >
-                            Уже есть аккаунт? Войти
-                        </Typography>
                     </Form>
                 </Paper>
             )}
