@@ -1,0 +1,4 @@
+venv
+../-ElectricWebService/.env
+__pycache__/
+*.pyc
